@@ -1,8 +1,8 @@
 // I - Callback: là 1 hàm được truyền qua đối số và được gọi lại trong hàm truyền đối số/
 function myCallBack(major) {
-  setTimeout(() => {
+  // setTimeout(() => {
     console.log(`Bắt đầu học: ${major}`);
-  }, 3000);
+  // }, 3000);
 }
 
 function myFunction(callback) {
@@ -14,7 +14,6 @@ function myFunction(callback) {
 
 myFunction(myCallBack);
 
-// myCallBack("match");
 
 // Nếu hàm callback xử lý các side effect mất nhiều thời gian
 //  và được gọi trong 1 hàm khác thì vẫn không giải quyết được bài toàn chạy tuần tự.

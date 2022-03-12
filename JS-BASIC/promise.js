@@ -94,33 +94,33 @@
 //   });
 
 // 6. Ví dụ
-// function sleep(ms) {
-//   return new Promise((resolve) => {
-//     setTimeout(resolve, 1000);
-//   });
-// }
-// sleep(1000)
-//   .then(function () {
-//     console.log(1);
-//     return sleep(1000);
-//   })
-//   .then(function () {
-//     console.log(2);
-//     // return sleep(1000);
-//     return new Promise(function(resolve, reject) {
-//       reject('Coloi')
-//     })
-//   })
-//   .then(function () {
-//     console.log(3);
-//     return sleep(1000);
-//   })
-//   .then(function () {
-//     console.log(4);
-//     return sleep(1000);
-//   }).catch(function(error){
-//     console.log(error)
-  // })
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 1000);
+  });
+}
+sleep(1000)
+  .then(function () {
+    console.log(1);
+    return sleep(1000);
+  })
+  .then(function () {
+    console.log(2);
+    // return sleep(1000);
+    return new Promise(function(resolve, reject) {
+      reject('Coloi')
+    })
+  })
+  .then(function () {
+    console.log(3);
+    return sleep(1000);
+  })
+  .then(function () {
+    console.log(4);
+    return sleep(1000);
+  }).catch(function(error){
+    console.log(error)
+  })
 
   // trong promise chain nếu TH có 1 promise trả về reject thì phải xử 
   // lý trong phương thức catch
