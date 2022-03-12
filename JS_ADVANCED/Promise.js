@@ -145,4 +145,4 @@ new promise = new Promise.reject()
 cần kết quả cảu 2 promise trả về để làm gì đó.
 Nhận đối số là 1 mảng các promise => trả về 1 promise.
 => trả về kết quả là 1 mảng kết quả trong hàm then ()
-Nhưng nếu có 1 promise bị lỗi thì tất cả những promise còn lại sẽ bị lỗi.
+Nhưng nếu có 1 promise bị lỗi thì tất cả những promise còn lại sẽ bị lỗi và chạy luôn vào catch
